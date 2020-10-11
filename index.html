@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+		crossorigin="anonymous"></script>
+	<script src="js/database.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body onload="login('index')">
+	<header>
+		<div class="text-white" style="font-size: 24px;">
+			<nav class="navbar navbar-expand-lg" style="background-color: rgb(23, 42, 73);">
+				<a class="navbar-brand text-white" href="#" style="font-size: 28px;">Carcere di Pistoia</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active text-white">
+							<a class="nav-link text-white" href="#">
+								<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-fill" fill="currentColor"
+									xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd"
+										d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+									<path fill-rule="evenodd"
+										d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+								</svg>
+								Home <span class="sr-only">(current)</span>
+							</a>
+						</li>
+						<li class="nav-item text-white">
+							<a class="nav-link text-white" href="amministrazione/index.html">
+								<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-badge-fill" fill="currentColor"
+									xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd"
+										d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm4.5 0a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3zM8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm5 2.755C12.146 12.825 10.623 12 8 12s-4.146.826-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-.245z" />
+								</svg>
+								Amministrazione
+							</a>
+						</li>
+						<li class="nav-item text-white">
+							<a class="nav-link text-white" href="amministrazione/tabelle.html">
+								<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-table" fill="currentColor"
+									xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd"
+										d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z" />
+								</svg>
+								Tabelle
+							</a>
+						</li>
+					</ul>
+					<ul class="nav justify-content-end">
+						<li class="nav-item">
+							<a class="nav-link text-white" href="login/index.html">
+								<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
+									<path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+									<path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
+								</svg>
+								ACCEDI AI SERVIZI
+							</a>
+						</li>
+				</div>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<br><br>
+	<div class="container-fluid col-12">
+		<div class="row">
+			<div class="col-3 container border border-info rounded-lg">
+				<br>
+				<h2 id="newsTitolo">News</h2>
+				<span id="news"></span>
+				<script>
+					var today = new Date();
+					var date =
+						today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear();
+					document.getElementById("newsTitolo").innerHTML = "News " + date;
+					news();
+					if (document.getElementById("news").innerHTML == "") {
+						document.getElementById("news").innerHTML = "Nessuna news!";
+					}
+				</script>
+			</div>
+			<div class="col-8 container">
+				<div class="text-center">
+					<br>
+					<h1 id="benvenuto" style="font-size: 50px;">BENVENUTO</h1>
+				</div>
+				<br><br><br>
+				<div class="border">
+					<br>
+					<h3 class="text-center">Account amministratore</h3>
+					<p class="text-center">Username: <var>admin</var></p>
+					<p class="text-center">Password: <var>admin</var></p>
+					<br>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="page-footer" style="position: absolute;width: 100%;bottom: 0;">
+		<div class="bg-secondary footer-copyright col-12">
+			<div class="row">
+				<div class="col-4">
+					<a href="http://www.comune.pistoia.it/"><img src="img/comune.png" alt="" width="20%"></a>
+				</div>
+				<div class="col-4 text-center">
+					<br>
+					<h2 class="text-white">Casa Circondariale di Pistoia</h2>
+					<span class="text-white">Via dei Macelli, 13</span><br>
+					<span class="text-white">Pistoia (PT), 51100</span>
+				</div>
+				<div class="col-4 text-right">
+					<a href="https://poliziapenitenziaria.gov.it/polizia-penitenziaria-site/"><img src="img/penitenzaria.png"
+							alt="" width="17%"></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>
