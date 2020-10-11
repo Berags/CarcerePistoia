@@ -22,7 +22,7 @@ Prevedi la possibilià di:
 Nel carcere di Pistoia non tutti i detenuti arrivano alla data di scarcerazione,
 gestisci l’eventualità in cui un detenuto sia evaso e quella in cui sia deceduto.
 Scrivi una funzione di riepilogo dell'andamento del carcere e che stampi:
-    - il numero delle guardie,
-    - il numero di detenuti totali,
-    - il numero di detenuti evasi,
-    - il numero di detenuti deceduti all’interno della struttura.
+- il numero delle guardie,
+- il numero di detenuti totali,
+- il numero di detenuti evasi,
+- il numero di detenuti deceduti all’interno della struttura.
