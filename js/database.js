@@ -52,6 +52,20 @@ function creaDetenuto() {
   var carcerazione = document.getElementById("Carcerazione").value;
   var scarcerazione = document.getElementById("Scarcerazione").value;
   var crimine = document.getElementById("Crimine").value;
+  if (nome == "" || cognome == "") {
+    alert("Inserire il nome o il cognome");
+    return;
+  }
+  if (
+    new Date(carcerazione) > new Date(scarcerazione) ||
+    carcerazione == "" ||
+    scarcerazione == ""
+  ) {
+    alert(
+      "La data di carcerazione deve essere maggiore o uguale a quella di scarcerazione!"
+    );
+    return;
+  }
   if (persone == null) {
     persone = [];
     var perso = new Persona(
@@ -90,6 +104,10 @@ function creaGuardia() {
   var nome = document.getElementById("Nome").value;
   var cognome = document.getElementById("Cognome").value;
   var nascita = document.getElementById("Nascita").value;
+  if (nome == "" || cognome == "") {
+    alert("Inserire il nome o il cognome");
+    return;
+  }
   if (persone == null) {
     persone = [];
     var perso = new Persona(
@@ -132,6 +150,20 @@ function modificaDetenuto() {
   var crimine = document.getElementById("Crimine").value;
   var stato = document.getElementById("Stato").value;
   var select = document.getElementById("detenutiList");
+  if (nome == "" || cognome == "") {
+    alert("Inserire il nome o il cognome");
+    return;
+  }
+  if (
+    new Date(carcerazione) > new Date(scarcerazione) ||
+    carcerazione == "" ||
+    scarcerazione == ""
+  ) {
+    alert(
+      "La data di carcerazione deve essere maggiore o uguale a quella di scarcerazione!"
+    );
+    return;
+  }
   for (let i = 0; i < persone.length; i++) {
     if (persone[i].id == select.value) {
       persone[i].fascicolo.nome = nome;
@@ -204,6 +236,10 @@ function modificaGuardia() {
   var nascita = document.getElementById("NascitaGuardia").value;
   var titolo = document.getElementById("titoloGuardia");
   var select = document.getElementById("guardieList");
+  if (nome == "" || cognome == "") {
+    alert("Inserire il nome o il cognome");
+    return;
+  }
   for (let i = 0; i < persone.length; i++) {
     if (persone[i].id == select.value) {
       titolo.innerHTML =
